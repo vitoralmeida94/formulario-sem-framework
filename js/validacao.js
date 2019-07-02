@@ -83,7 +83,7 @@ function mascaraTelefone(tel){
 }
 
 function mascaraCpf(cpf){
-     
+      
     if(cpf.value.length === 3)
         cpf.value = cpf.value + '.';
     
