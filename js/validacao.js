@@ -1,4 +1,14 @@
 // javascript puro!!
+class Contato{
+    constructor(nome, email, cpf,telefone){
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+        this.telefone=telefone;
+    }
+
+}
+
 function verificaInput(id){
     var campo = document.getElementById(id).value;
     var nome = document.getElementById('nome').value;
@@ -102,6 +112,13 @@ function cadastrar(){
     var campo3 = document.getElementById('cpf').value;
     var campo4 = document.getElementById('telefone').value;
 
-    document.getElementById('msg').innerHTML='<li>'+campo1+','+campo2+','+campo3+','+campo4+'</li>';
-    alert('Dados OK');
+    var contato = new Contato(campo1,campo2,campo3,campo4);
+    base = [];
+    base.push(contato);
+
+
+    for(i=0;i<=base.length;i++){
+        document.getElementById('msg').innerHTML+='<li>Nome: '+base[i].nome+' Email: '+base[i].email+' CPF: '+base[i].cpf+' Telefone: '+base[i].telefone+'</li>';
+    }
+   
 }
