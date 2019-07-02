@@ -1,3 +1,4 @@
+// javascript puro!!
 function verificaInput(id){
     var campo = document.getElementById(id).value;
     var nome = document.getElementById('nome').value;
