@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Formulário de Teste</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script type="text/javascript" src="js/validacao.js"></script>
+    </head>
+    <body onload="deixarOculto();">
+        <div class="formulario">
+        
+            <h2>Formulário de Cadastro</h2>
+            <label for="nome">Nome Completo (sem abreviações)</label><br/>
+            <input id="nome" name="nome" onChange="verificaInput(id);" /><br/>
+            <label id="erroNome">Campo deve conter 3 caracteres ou mais</label><br/>
+            <label for="email">E-mail</label><br/>
+            <input id="email" name="email"  onChange="msgEmail();"/><br/>
+            <label id="erroEmail">Campo deve conter um e-mail válido</label><br/>
+            <label for="cpf">CPF</label><br/>
+            <input id="cpf" name="cpf" onChange="verificaInput(id);" onChange="msgCpf();" onkeypress="mascaraCpf(this)"/><br/>
+            <label id="erroCpf">Digite somente números</label><br/>
+            <label for="telefone">Telefone</label><br/>
+            <input id="telefone" name="telefone" onChange="verificaInput(id);" onChange="msgTelefone();" onkeypress="mascaraTelefone(this)"/><br/>
+            <label id="erroTelefone">Digite somente números com o DDD</label><br/><br/>
+            <button id="botao" disabled onclick="cadastrar();">Cadastrar</button>
+        
+        <div id="msg">
+
+        </div>
+        </div>
+    </body>
+</html>
